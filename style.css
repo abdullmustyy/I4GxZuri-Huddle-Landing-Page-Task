@@ -444,6 +444,10 @@ header {
         padding: 0;
     }
 
+    .header .nav a button {
+        font-size: 7px;
+    }
+
     .header .nav button {
         height: 1.5rem;
         font-size: 10px;
