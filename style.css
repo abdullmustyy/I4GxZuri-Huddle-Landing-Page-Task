@@ -62,11 +62,135 @@ header {
     height: 60%;
     padding: 0rem 4rem;
 
+    transition: all 300ms ease-in-out;
+}
+
+.header .nav .logo {
+    animation: huddlelogo;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    position: relative;
+
+    transition: all 1s ease-in-out;
+}
+
+.header .nav .logo:hover {
+    transform: rotateY(360deg);
+}
+
+@keyframes huddlelogo {
+    0% {
+        left: -500px;
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
+.header .nav .git-link {
+    animation: gitlink;
+    animation-delay: 3s;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    position: relative;
+
+    transition-property: all;
+    transition-duration: 0.3s;
+}
+
+.header .nav .git-link:hover {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+@keyframes gitlink {
+    0% {
+        top: -500px;
+    }
+
+    75% {
+        top: 0;
+        transform: rotateY(90deg);
+    }
+
+    100% {
+        top: 0;
+        transform: rotateY(360deg);
+    }
+}
+
+.header .nav .navbtn {
+    animation: navbtn;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    position: relative;
+}
+
+@keyframes navbtn {
+    0% {
+        right: -500px;
+    }
+
+    100% {
+        right: 0;
+    }
 }
 
 .header .intro {
     display: flex;
     padding: 1rem 0 4rem;
+}
+
+.header .intro h1 {
+    animation: introh1;
+    animation-duration: 6s;
+    animation-fill-mode: forwards;
+    position: relative;
+}
+
+@keyframes introh1 {
+    0% {
+        left: -1000px;
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
+.header .intro p {
+    animation: introp;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    position: relative;
+}
+
+@keyframes introp {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.header .intro-text button {
+    animation: introbtn;
+    animation-delay: 1s;
+    animation-duration: 6s;
+    position: relative;
+}
+
+@keyframes introbtn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 .header .intro-text {
@@ -88,6 +212,20 @@ header {
     font-weight: 700;
     padding: 1.2rem;
     width: 19rem;
+
+    transition: all 300ms ease-in-out;
+}
+
+.header .intro-text button:hover {
+    color: lighten(var(--primaryColor), 50%);
+    color: white;
+    opacity: 0.6;
+}
+
+.header .intro-text button:active {
+    box-shadow: 0px 10px 10px #000;
+    padding: 1.3rem;
+    width: 19.2rem;
 }
 
 .header .intro-text h1 {
@@ -112,6 +250,23 @@ header {
 
 .header .intro-image img {
     width: 100%;
+}
+
+.header .intro-image img {
+    animation: introimg;
+    animation-duration: 6s;
+    animation-fill-mode: forwards;
+    position: relative;
+}
+
+@keyframes introimg {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 /* MAIN */
@@ -142,6 +297,14 @@ header {
     font-size: 1.3rem;
     margin-bottom: 3rem;
     padding: 3rem 3rem 3rem 8rem;
+    position: relative;
+
+    transition: all 300ms ease-in-out;
+}
+
+.main .illustration:hover {
+    box-shadow: 0px 10px 40px #000;
+    padding: 2rem 2rem 2rem 6rem;
 }
 
 .main .illustration2 {
@@ -183,6 +346,14 @@ header {
     left: 0;
     width: 40rem;
     text-align: center;
+
+    transition: all 300ms ease-in-out;
+}
+
+.aside:hover {
+    box-shadow: 0px 10px 40px #000;
+    padding: 3.5rem 5.5rem;
+    width: 41rem;
 }
 
 .aside button {
@@ -198,6 +369,14 @@ header {
     margin-top: 2rem;
     padding: 1.5rem 0;
     width: 21rem;
+
+    transition: all 300ms ease-in-out;
+}
+
+.aside button:active {
+    box-shadow: 0px 10px 10px #000;
+    padding: 1.6rem 0;
+    width: 21.2rem;
 }
 
 /* FOOTER */
@@ -205,6 +384,12 @@ header {
     background: hsl(192, 100%, 9%);
     color: white;
     padding: 10rem 0 0;
+
+    transition: all 300ms ease-in-out;
+}
+
+.footer:hover {
+    padding: 9rem 0 0;
 }
 
 .footer a {
@@ -281,11 +466,14 @@ header {
     height: 2rem;
     justify-content: center;
     width: 2rem;
+
+    transition: all 1s ease-in-out;
 }
 
 .footer .logo:hover {
     border: 1px solid hsl(322, 100%, 66%);
     color: hsl(322, 100%, 66%);
+    transform: rotateY(360deg);
 }
 
 .footer .socials {
@@ -384,6 +572,13 @@ header {
         font-size: 0.7rem;
         padding: 2.5rem 1rem;
         width: 94%;
+
+        transition: all 300ms ease-in-out;
+    }
+
+    .aside:hover {
+        padding: 2rem;
+        width: 100%;
     }
 
     .aside button {
@@ -391,6 +586,12 @@ header {
         margin-top: 1.5rem;
         padding: 0.8rem 0;
         width: 60%;
+    }
+
+    .aside button:active {
+        box-shadow: 0px 10px 10px #000;
+        padding: 0.9rem 0;
+        width: 70%;
     }
 
     header {
@@ -481,6 +682,12 @@ header {
         margin-bottom: 2rem;
         text-align: center;
         padding: 3rem 2rem 2rem;
+
+        transition: all 300ms ease-in-out;
+    }
+
+    .main .illustration:hover {
+        padding: 2rem 1rem 1rem;
     }
 
     .main .illustration-img2,
