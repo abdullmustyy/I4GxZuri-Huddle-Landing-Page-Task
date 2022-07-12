@@ -1,2 +1,2 @@
-# I4GxZuri-Huddle-Landing-Page-Task
+Huddle-Landing-Page
 A responsive design of Huddle Landing Page
